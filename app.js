@@ -8,15 +8,15 @@ const app = express();
 
 const userRoutes = require('./routes/user')
 
-// app
-//   .use(
-//     basicAuth({
-//       authorizer: myAuthorizer,
-//       challenge: true,
-//       authorizeAsync: true,
-//       realm: "My Application",
-//     })
-//   );
+app
+  .use(
+    basicAuth({
+      authorizer: myAuthorizer,
+      challenge: true,
+      authorizeAsync: true,
+      realm: "My Application",
+    })
+  );
 //  log in feature
 function myAuthorizer(username, password, callback) {
   const users = fs.readFileSync('users.json', 'utf-8', async (err, data)=> {
