@@ -1,3 +1,3 @@
 # notetaking2
 
-Have add more function like login date display and status column 
+Have to add more function like login date display and status column 
