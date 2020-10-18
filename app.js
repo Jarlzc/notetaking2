@@ -46,8 +46,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(userRoutes);
 
 
-
-
 app.listen(3030, () => {
     console.log("Server started on port 3030")
 })
