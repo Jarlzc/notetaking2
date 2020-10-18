@@ -8,6 +8,7 @@
         <input type="checkbox">
         <p><%= itemsarray[i].note %><p>
         <button class="del" data-id=<%= itemsarray[i].id %> type="submit" name="">-</button>
+        <a href="/edit/<%= itemsarray[i].id %>">#</a>
     </div>
     <% } %>
     <form class="item" action="/" method="POST">

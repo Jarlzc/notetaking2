@@ -1,14 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const path = require('path');
 const fs = require('fs');
 const { raw } = require('body-parser');
 const basicAuth = require("express-basic-auth");
 const app = express();
 
 const userRoutes = require('./routes/user')
-
-
 
 // app
 //   .use(
@@ -38,14 +36,18 @@ function myAuthorizer(username, password, callback) {
   }
 }
 
+
+
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(userRoutes);
 
 
-app.listen(3000, () => {
-    console.log("Server started on port 3000")
+
+
+app.listen(3030, () => {
+    console.log("Server started on port 3030")
 })

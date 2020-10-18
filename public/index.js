@@ -16,7 +16,6 @@ $('.del').on('click', function (event) {
 
 
 
-
 $('.add').on('click', function (event) {
     $.ajax({
         type: "GET",
